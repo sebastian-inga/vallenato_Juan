@@ -13,7 +13,6 @@
     <header>
         <div class="contenedor-header">
             <div class="logo-titulo">
-                <!-- Usando tu imagen local -->
                 <img src="imagenes/acordeon.png" alt="Logo Acordeón" class="logo-img">
                 <div class="texto-header">
                     <h1>ESCUELA<br>DE ACORDEÓN<br>MARIO TORRES</h1>
@@ -38,7 +37,7 @@
     </header>
 
     <!-- ============================================== -->
-    <!-- VIDEO CENTRADO Y CON EFECTO                   -->
+    <!-- VIDEO CENTRADO                                 -->
     <!-- ============================================== -->
     <div class="contenedor-video-centrado">
         <div class="video-caja animacion-aparecer">
@@ -46,10 +45,58 @@
         </div>
     </div>
 
+    <!-- ============================================== -->
+    <!-- NUEVA SECCIÓN: REPRODUCTOR DE MÚSICA           -->
+    <!-- ============================================== -->
+    <section class="seccion-musica animacion-aparecer">
+        <h2><i class="fas fa-music"></i> Nuestra Música</h2>
+        <p class="subtitulo-musica">Disfruta de los mejores temas de acordeón y vallenato.</p>
+        
+        <div class="contenedor-playlist">
+            
+            <!-- Canción 1 -->
+            <div class="tarjeta-cancion" onclick="reproducirCancion(this)">
+                <div class="info-cancion">
+                    <span class="icono-play"><i class="fas fa-play-circle"></i></span>
+                    <div>
+                        <p class="titulo-cancion"><i class="fas fa-music nota"></i> De millón a cero</p>
+                        <p class="artista-cancion">Kaleth Morales</p>
+                    </div>
+                </div>
+                <!-- El reproductor de audio está oculto y se activa con JS -->
+                <audio src="audio/Obsesion - Peter Manja rres & Sergio Luis Rodriguez.mp3"></audio>
+            </div>
+
+            <!-- Canción 2 -->
+            <div class="tarjeta-cancion" onclick="reproducirCancion(this)">
+                <div class="info-cancion">
+                    <span class="icono-play"><i class="fas fa-play-circle"></i></span>
+                    <div>
+                        <p class="titulo-cancion"><i class="fas fa-music nota"></i> Todo de Cabeza</p>
+                        <p class="artista-cancion">Kaleth Morales</p>
+                    </div>
+                </div>
+                <audio src="audio/Kaleth Morales-Todo de Cabeza.mp3"></audio>
+            </div>
+
+            <!-- Canción 3 -->
+            <div class="tarjeta-cancion" onclick="reproducirCancion(this)">
+                <div class="info-cancion">
+                    <span class="icono-play"><i class="fas fa-play-circle"></i></span>
+                    <div>
+                        <p class="titulo-cancion"><i class="fas fa-music nota"></i> Obsesión</p>
+                        <p class="artista-cancion">Peter Manjarrés</p>
+                    </div>
+                </div>
+                <audio src="audio/De millón a cero - kaleth Morales.mp3"></audio>
+            </div>
+
+        </div>
+    </section>
+
     <!-- ==================== SECCIÓN CLASES (Amarilla) ==================== -->
     <section class="seccion-amarilla">
         <div class="contenedor-central animacion-aparecer">
-            <!-- Usando tu imagen local del oso -->
             <img src="imagenes/oso.png" alt="Niño tocando acordeón" class="img-clases">
             
             <div class="contenido-clases">

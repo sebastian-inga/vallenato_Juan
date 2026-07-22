@@ -19,30 +19,20 @@ body {
     padding: 0 20px;
 }
 
-/* =================================================== */
-/* --- ANIMACIONES GLOBALES DE ENTRADA --- */
-/* =================================================== */
+/* --- ANIMACIONES GLOBALES --- */
 .animacion-aparecer {
     opacity: 0;
     transform: translateY(30px);
     animation: aparecer 1s ease-out forwards;
 }
-
 @keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-
-/* Retraso en la animación para que parezca secuencial */
 .contenedor-video-centrado .animacion-aparecer { animation-delay: 0.1s; }
-.seccion-amarilla .animacion-aparecer { animation-delay: 0.3s; }
-.seccion-verde .animacion-aparecer { animation-delay: 0.5s; }
+.seccion-musica .animacion-aparecer { animation-delay: 0.2s; }
+.seccion-amarilla .animacion-aparecer { animation-delay: 0.4s; }
+.seccion-verde .animacion-aparecer { animation-delay: 0.6s; }
 
 /* --- HEADER --- */
 header {
@@ -50,29 +40,19 @@ header {
     padding-top: 15px;
     border-bottom: 4px solid #2a4b41;
 }
-
 .contenedor-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 10px;
 }
-
-.logo-titulo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
+.logo-titulo { display: flex; align-items: center; gap: 15px; }
 .logo-img {
     width: 65px;
     height: 65px;
-    transition: transform 0.3s ease; /* Efecto para el logo */
+    transition: transform 0.3s ease;
 }
-.logo-img:hover {
-    transform: scale(1.1) rotate(-5deg);
-}
-
+.logo-img:hover { transform: scale(1.1) rotate(-5deg); }
 .texto-header h1 {
     color: #2a4b41;
     font-size: 1.5rem;
@@ -80,7 +60,6 @@ header {
     font-weight: 800;
     text-transform: uppercase;
 }
-
 .redes-header a {
     color: #2a4b41;
     text-decoration: none;
@@ -141,9 +120,7 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* ============================================= */
-/* --- VIDEO CENTRADO CON EFECTO --- */
-/* ============================================= */
+/* --- VIDEO --- */
 .contenedor-video-centrado {
     width: 100%;
     background-color: #e0e0e0;
@@ -153,7 +130,6 @@ nav ul li a:hover::after {
     display: flex;
     justify-content: center;
 }
-
 .video-caja {
     width: 100%;
     max-width: 800px;
@@ -174,22 +150,106 @@ nav ul li a:hover::after {
     border: 0;
 }
 
+/* ============================================= */
+/* --- NUEVO: SECCIÓN DE MÚSICA --- */
+/* ============================================= */
+.seccion-musica {
+    background-color: #ffffff;
+    padding: 40px 0;
+    border-bottom: 4px solid #2a4b41;
+    text-align: center;
+}
+.seccion-musica h2 {
+    font-size: 2rem;
+    color: #2a4b41;
+    margin-bottom: 5px;
+}
+.seccion-musica .subtitulo-musica {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+.contenedor-playlist {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px;
+}
+
+.tarjeta-cancion {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.tarjeta-cancion:hover {
+    background-color: #ececec;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-color: #2a4b41;
+}
+/* Efecto cuando está sonando */
+.tarjeta-cancion.reproduciendo {
+    background-color: #dcb143;
+    border-color: #2a4b41;
+    color: #1a1a1a;
+}
+.tarjeta-cancion.reproduciendo .titulo-cancion { color: #1a1a1a; }
+.tarjeta-cancion.reproduciendo .artista-cancion { color: #2a4b41; }
+.tarjeta-cancion.reproduciendo .icono-play i { color: #ffffff; }
+
+.info-cancion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.icono-play i {
+    font-size: 2rem;
+    color: #2a4b41;
+    transition: transform 0.2s ease;
+}
+.tarjeta-cancion:hover .icono-play i {
+    transform: scale(1.1);
+}
+.nota {
+    color: #2a4b41;
+    margin-right: 5px;
+}
+.titulo-cancion {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+}
+.artista-cancion {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 2px;
+}
+/* ============================================= */
+
 /* --- SECCIÓN AMARILLA --- */
 .seccion-amarilla {
     background-color: #dcb143;
     padding: 50px 0;
     border-bottom: 4px solid #2a4b41;
 }
-
 .contenedor-central {
     display: flex;
     gap: 40px;
-    align-items: center; /* Centrado verticalmente */
+    align-items: center;
 }
-
 .img-clases {
-    width: 320px; /* La hicimos más grande */
-    height: auto; /* Se ajusta a la proporción del oso sin deformarse */
+    width: 320px;
+    height: auto;
     border: 6px solid #ffffff;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
@@ -199,7 +259,6 @@ nav ul li a:hover::after {
     transform: scale(1.08) rotate(-2deg);
     box-shadow: 0 12px 24px rgba(0,0,0,0.4);
 }
-
 .contenido-clases {
     flex: 1;
     background-color: #c9a338;
@@ -226,10 +285,9 @@ nav ul li a:hover::after {
     color: #ffffff;
     border-bottom: 4px solid #dcb143;
 }
-
 .bloque-contacto {
     flex: 0 0 350px;
-    background-color: rgba(255,255,255,0.05); /* Un toque de fondo sutil */
+    background-color: rgba(255,255,255,0.05);
     padding: 20px;
     border-radius: 10px;
 }
@@ -259,13 +317,8 @@ nav ul li a:hover::after {
     font-size: 0.95rem;
     line-height: 1.4;
 }
-.bloque-contacto p i {
-    margin-right: 10px;
-}
-
-.bloque-historia {
-    flex: 1;
-}
+.bloque-contacto p i { margin-right: 10px; }
+.bloque-historia { flex: 1; }
 .bloque-historia p {
     font-size: 0.95rem;
     line-height: 1.6;
@@ -278,18 +331,12 @@ footer {
     padding: 25px 0;
     color: #ffffff;
 }
-
 .contenedor-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.footer-texto {
-    font-size: 1rem;
-    line-height: 1.3;
-}
-
+.footer-texto { font-size: 1rem; line-height: 1.3; }
 .footer-redes a {
     color: #ffffff;
     text-decoration: none;
@@ -299,7 +346,7 @@ footer {
 .footer-redes i {
     border: 1px solid #ffffff;
     padding: 8px 10px;
-    border-radius: 50%; /* Los hicimos redondos */
+    border-radius: 50%;
     font-size: 1.1rem;
     transition: all 0.3s ease;
 }
@@ -312,37 +359,15 @@ footer {
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .contenedor-header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 10px;
+        flex-direction: column; align-items: center; text-align: center; gap: 10px;
     }
     .logo-titulo { flex-direction: column; }
     nav ul { flex-wrap: wrap; justify-content: center; gap: 15px;}
-    
     .video-caja { max-width: 100%; border-radius: 0; }
-    
-    .contenedor-central {
-        flex-direction: column;
-        align-items: center;
-    }
-    .img-clases {
-        width: 80%;
-        max-width: 300px;
-    }
-    .bloque-contacto {
-        flex: 1;
-        width: 100%;
-    }
-    .bloque-contacto h2 {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    .contenedor-footer {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
+    .contenedor-central { flex-direction: column; align-items: center; }
+    .img-clases { width: 80%; max-width: 300px; }
+    .bloque-contacto { flex: 1; width: 100%; }
+    .bloque-contacto h2 { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .contenedor-footer { flex-direction: column; gap: 15px; text-align: center; }
     .footer-redes a { margin: 0 6px; }
 }
