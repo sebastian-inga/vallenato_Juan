@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escuela de Acordeón Esteban Rivera</title>
+    <title>Escuela de Acordeón Mario Torres</title>
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -11,128 +11,241 @@
 
     <!-- ==================== HEADER ==================== -->
     <header>
-        <div class="contenedor-header">
-            <div class="logo-titulo">
+        <section class="contenedor-header">
+            <figure class="logo-titulo">
                 <img src="imagenes/acordeon.png" alt="Logo Acordeón" class="logo-img">
-                <div class="texto-header">
-                    <h1>ESCUELA<br>DE ACORDEÓN<br>ESTEBAN RIVERA</h1>
-                </div>
-            </div>
+                <figcaption class="texto-header">
+                    <h1>ESCUELA<br>DE ACORDEÓN<br>MARIO TORRES</h1>
+                </figcaption>
+            </figure>
             
             <aside class="redes-header">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-whatsapp"></i></a>
             </aside>
-        </div>
+        </section>
 
         <nav>
             <ul>
                 <li><a href="#">CLASES</a></li>
                 <li><a href="#">HISTORIA</a></li>
-                <li><a href="#">VÍDEOS ACORDEÓN</a></li>
+                <li><a href="#">MÚSICA</a></li>
                 <li><a href="#">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- ============================================== -->
-    <!-- VIDEO CENTRADO                                 -->
+    <!-- SECCIÓN 1: VIDEOS                              -->
     <!-- ============================================== -->
-    <div class="contenedor-video-centrado">
-        <div class="video-caja animacion-aparecer">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/pITINFqGXsQ?si=UczVtO9bzJt-LgRk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </div>
+    <section class="seccion-gris animacion-aparecer">
+        <section class="contenedor-central">
+            <h2 class="titulo-seccion"><i class="fas fa-video"></i> Nuestros Videos</h2>
+            <section class="grid-2-columnas">
+                <article class="caja-multimedia tarjeta-efecto">
+                    <h3><i class="fas fa-download"></i> Video Descargado</h3>
+                    <figure class="video-local-caja">
+                        <video controls poster="https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=400&auto=format&fit=crop">
+                            <source src="videos/mi_video_local.mp4" type="video/mp4">
+                            Tu navegador no soporta el video.
+                        </video>
+                    </figure>
+                </article>
+                <article class="caja-multimedia tarjeta-efecto">
+                    <h3><i class="fab fa-youtube"></i> Video de YouTube</h3>
+                    <figure class="video-youtube-caja">
+                        <iframe src="https://www.youtube.com/embed/pITINFqGXsQ?si=UczVtO9bzJt-LgRk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </figure>
+                </article>
+            </section>
+        </section>
+    </section>
 
     <!-- ============================================== -->
-    <!-- NUEVA SECCIÓN: REPRODUCTOR DE MÚSICA           -->
+    <!-- SECCIÓN 2: MÚSICA (LOCAL Y SPOTIFY)            -->
     <!-- ============================================== -->
     <section class="seccion-musica animacion-aparecer">
-        <h2><i class="fas fa-music"></i> Nuestra Música</h2>
-        <p class="subtitulo-musica">Disfruta de los mejores temas de acordeón y vallenato.</p>
-        
-        <div class="contenedor-playlist">
-            
-            <!-- Canción 1 -->
-            <div class="tarjeta-cancion" onclick="reproducirCancion(this)">
-                <div class="info-cancion">
-                    <span class="icono-play"><i class="fas fa-play-circle"></i></span>
-                    <div>
-                        <p class="titulo-cancion"><i class="fas fa-music nota"></i> De millón a cero</p>
-                        <p class="artista-cancion">Kaleth Morales</p>
-                    </div>
-                </div>
-                <!-- El reproductor de audio está oculto y se activa con JS -->
-                <audio src="audio/Obsesion - Peter Manja rres & Sergio Luis Rodriguez.mp3"></audio>
-            </div>
+        <section class="contenedor-central">
+            <h2 class="titulo-seccion"><i class="fas fa-headphones"></i> Nuestra Música</h2>
+            <section class="grid-2-columnas">
+                
+                <article class="caja-multimedia tarjeta-efecto">
+                    <h3><i class="fas fa-music"></i> Canciones Locales</h3>
+                    <section class="contenedor-playlist">
+                        <article class="tarjeta-cancion" onclick="reproducirCancion(this)">
+                            <figure class="info-cancion">
+                                <span class="icono-play"><i class="fas fa-play-circle"></i></span>
+                                <figcaption>
+                                    <p class="titulo-cancion">De millón a cero</p>
+                                    <p class="artista-cancion">Kaleth Morales</p>
+                                </figcaption>
+                            </figure>
+                            <audio src="musica/De millón a cero - kaleth Morales.mp3"></audio>
+                        </article>
+                        <article class="tarjeta-cancion" onclick="reproducirCancion(this)">
+                            <figure class="info-cancion">
+                                <span class="icono-play"><i class="fas fa-play-circle"></i></span>
+                                <figcaption>
+                                    <p class="titulo-cancion">Todo de Cabeza</p>
+                                    <p class="artista-cancion">Kaleth Morales</p>
+                                </figcaption>
+                            </figure>
+                            <audio src="musica/Kaleth Morales-Todo de Cabeza.mp3"></audio>
+                        </article>
+                        <article class="tarjeta-cancion" onclick="reproducirCancion(this)">
+                            <figure class="info-cancion">
+                                <span class="icono-play"><i class="fas fa-play-circle"></i></span>
+                                <figcaption>
+                                    <p class="titulo-cancion">Obsesión</p>
+                                    <p class="artista-cancion">Peter Manjarrés</p>
+                                </figcaption>
+                            </figure>
+                            <audio src="musica/Obsesion - Peter Manjarrés.mp3"></audio>
+                        </article>
+                    </section>
+                </article>
 
-            <!-- Canción 2 -->
-            <div class="tarjeta-cancion" onclick="reproducirCancion(this)">
-                <div class="info-cancion">
-                    <span class="icono-play"><i class="fas fa-play-circle"></i></span>
-                    <div>
-                        <p class="titulo-cancion"><i class="fas fa-music nota"></i> Todo de Cabeza</p>
-                        <p class="artista-cancion">Kaleth Morales</p>
-                    </div>
-                </div>
-                <audio src="audio/Kaleth Morales-Todo de Cabeza.mp3"></audio>
-            </div>
+                <article class="caja-multimedia tarjeta-efecto">
+                    <h3><i class="fab fa-spotify"></i> Escucha en Spotify</h3>
+                    <figure>
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5PSgIaJp6mjIoO5y8kNkrK?utm_source=generator&si=df8efa55819946e8" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </figure>
+                </article>
 
-            <!-- Canción 3 -->
-            <div class="tarjeta-cancion" onclick="reproducirCancion(this)">
-                <div class="info-cancion">
-                    <span class="icono-play"><i class="fas fa-play-circle"></i></span>
-                    <div>
-                        <p class="titulo-cancion"><i class="fas fa-music nota"></i> Obsesión</p>
-                        <p class="artista-cancion">Peter Manjarrés</p>
-                    </div>
-                </div>
-                <audio src="audio/De millón a cero - kaleth Morales.mp3"></audio>
-            </div>
-
-        </div>
+            </section>
+        </section>
     </section>
 
-    <!-- ==================== SECCIÓN CLASES (Amarilla) ==================== -->
-    <section class="seccion-amarilla">
-        <div class="contenedor-central animacion-aparecer">
-            <img src="imagenes/oso.png" alt="Niño tocando acordeón" class="img-clases">
-            
-            <div class="contenido-clases">
+    <!-- ============================================== -->
+    <!-- SECCIÓN 3: JUEGO PAC-MAN Y EMISORA DE RADIO    -->
+    <!-- ============================================== -->
+    <section class="seccion-juego-radio animacion-aparecer">
+        <section class="contenedor-central">
+            <h2 class="titulo-seccion"><i class="fas fa-gamepad"></i> ¡Juega y Escucha!</h2>
+            <section class="grid-2-columnas">
+                
+                <!-- JUEGO DE PAC-MAN -->
+                <article class="caja-multimedia tarjeta-efecto" style="text-align: center;">
+                    <h3><i class="fas fa-ghost"></i> Pac-Man Avanzado</h3>
+                    <p style="margin-bottom: 10px; font-weight:bold; color:#2a4b41;">Usa las Flechas <strong>← ↑ → ↓</strong> para moverte</p>
+                    <figure>
+                        <canvas id="juegoCanvas" width="800" height="550" style="width:100%; height:auto; background:#000; border-radius:15px; border:3px solid #2a4b41; box-shadow: 0 0 20px rgba(42, 75, 65, 0.5);"></canvas>
+                    </figure>
+                </article>
+
+                <!-- EMISORA DE RADIO ONLINE -->
+                <article class="caja-multimedia tarjeta-efecto">
+                    <h3><i class="fas fa-radio"></i> Emisora en Vivo</h3>
+                    <figure>
+                        <!-- 
+                            👇 ESTE ES EL LINK DE LA EMISORA. PUEDES CAMBIARLO POR EL QUE QUIERAS.
+                            Busca en Google "URL stream directo radio online" y pega el link .mp3 o .pls aquí.
+                        -->
+                        <audio controls style="width: 100%; margin-top: 20px; border-radius: 50px;">
+                            <source src="http://stream.radioparadise.com/mp3-128" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </figure>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 15px; text-align: center; border-top: 1px solid #eee; padding-top: 10px;">
+                        <i class="fas fa-info-circle"></i> Escuchando: Radio Paradise
+                    </p>
+                </article>
+
+            </section>
+        </section>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- SECCIÓN 4: PDF Y PINTURA AVANZADA              -->
+    <!-- ============================================== -->
+    <section class="seccion-pdf-paint animacion-aparecer">
+        <section class="contenedor-central">
+            <h2 class="titulo-seccion"><i class="fas fa-tools"></i> Recursos y Herramientas</h2>
+            <section class="grid-2-columnas">
+                
+                <article class="caja-multimedia tarjeta-efecto" style="display: flex; flex-direction: column; height: 500px;">
+                    <h3><i class="fas fa-file-pdf"></i> Documento Vallenato</h3>
+                    <figure style="flex: 1;">
+                        <iframe src="https://patrimonio.mincultura.gov.co/Documents/cuadernillo_vallenato_v2.pdf" width="100%" height="100%" style="border: 1px solid #ddd; border-radius: 12px;"></iframe>
+                    </figure>
+                    <p style="margin-top: 10px; font-size: 0.85rem; text-align: center;">
+                        <i class="fas fa-info-circle"></i> Puedes hacer scroll y leerlo directamente.
+                    </p>
+                </article>
+
+                <article class="caja-multimedia tarjeta-efecto">
+                    <h3><i class="fas fa-paint-brush"></i> Pizarra de Dibujo</h3>
+                    <figure>
+                        <aside class="herramientas-paint">
+                            <section class="grupo-herramientas">
+                                <label><i class="fas fa-pen"></i> Herramienta: 
+                                    <select id="toolPicker" style="padding: 3px; border-radius: 4px; border:1px solid #2a4b41;">
+                                        <option value="pen">Lápiz</option>
+                                        <option value="eraser">Borrador</option>
+                                    </select>
+                                </label>
+                                <label><i class="fas fa-palette"></i> Color: <input type="color" id="colorPicker" value="#2a4b41"></label>
+                                <label><i class="fas fa-vector-square"></i> Tamaño: <input type="range" id="sizePicker" min="1" max="30" value="5"></label>
+                            </section>
+                            <section class="grupo-acciones">
+                                <button id="undoBtn" style="background:#555; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;"><i class="fas fa-undo"></i></button>
+                                <button id="redoBtn" style="background:#555; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;"><i class="fas fa-redo"></i></button>
+                                <button id="clearBtn" style="background:#c0392b; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;"><i class="fas fa-eraser"></i> Limpiar</button>
+                            </section>
+                        </aside>
+                        <canvas id="pizarra" style="width:100%; height:250px; background:#ffffff; border:2px solid #dcb143; border-radius:12px; cursor:crosshair;"></canvas>
+                    </figure>
+                </article>
+
+            </section>
+        </section>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- SECCIÓN 5: CLASES (Amarilla)                   -->
+    <!-- ============================================== -->
+    <section class="seccion-amarilla animacion-aparecer">
+        <section class="contenedor-central">
+            <figure class="contenedor-img-zoom">
+                <img src="imagenes/oso.png" alt="Niño tocando acordeón" class="img-clases">
+            </figure>
+            <article class="contenido-clases">
                 <h2>CLASES DE ACORDEÓN</h2>
-                <p><strong>¡Aprende a tocar el acordeón desde cero!</strong> Nuestras clases están diseñadas para todos los niveles: principiante, intermedio y avanzado.</p>
-                <p>Contamos con profesores titulados con más de 15 años de experiencia en la enseñanza musical. Nuestro método se basa en la práctica constante y la teoría aplicada.</p>
+                <p><strong>¡Aprende a tocar el acordeón desde cero!</strong> Nuestras clases están diseñadas para todos los niveles.</p>
+                <p>Contamos con profesores titulados con más de 15 años de experiencia en la enseñanza musical.</p>
                 <p>Las clases son personalizadas y se adaptan al ritmo de cada alumno.</p>
-            </div>
-        </div>
+                <button class="btn-cta" style="margin-top:15px; background:#2a4b41; color:#fff; border:none; padding:10px 25px; border-radius:50px; font-weight:bold; cursor:pointer; transition: all 0.3s;">Inscribirme ahora</button>
+            </article>
+        </section>
     </section>
 
-    <!-- ==================== SECCIÓN CONTACTO (Verde Oscuro) ==================== -->
-    <section class="seccion-verde">
-        <div class="contenedor-central animacion-aparecer">
-            
+    <!-- ============================================== -->
+    <!-- SECCIÓN 6: CONTACTO Y MAPA                     -->
+    <!-- ============================================== -->
+    <section class="seccion-verde animacion-aparecer">
+        <section class="contenedor-central">
             <aside class="bloque-contacto">
                 <h2>CONTACTO <span class="mini-redes"><i class="fab fa-facebook-f"></i> <i class="fab fa-instagram"></i> <i class="fab fa-whatsapp"></i></span></h2>
-                <p><i class="fas fa-map-marker-alt"></i> C/ Popayan, 19</p>
-                <p style="margin-bottom: 10px;">18014 - Popayan (Cauca)</p>
-                <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> 32174324515</p>
+                <p><i class="fas fa-map-marker-alt"></i> C/ Valencia de Don Juan, 19</p>
+                <p style="margin-bottom: 10px;">18014 - Granada (Granada capital)</p>
+                <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> 958 14 52 67</p>
                 <p><i class="fas fa-mobile-alt"></i> <strong>Móvil:</strong> 627 83 62 65</p>
-                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@escuelaestebanrivera.com</p>
-                <p><i class="fas fa-globe"></i> <strong>Web:</strong> https://angelcamayojm-wq.github.io/Vallenato/</p>
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@escuelamariotorres.com</p>
+                <p><i class="fas fa-globe"></i> <strong>Web:</strong> www.escuelamariotorres.com</p>
             </aside>
-
-            <article class="bloque-historia">
-                <p>La Escuela de Acordeón Esteban Rivera nace en el año 2022 en Granada. Nuestro objetivo principal es fomentar la cultura musical y el aprendizaje de este maravilloso instrumento en la provincia de Granada.</p>
-                <p>Con más de 2 años de trayectoria, hemos formado a cientos de alumnos que hoy en día forman parte de orquestas, bandas municipales y agrupaciones musicales de toda Andalucía.</p>
-                <p>Nuestras instalaciones cuentan con aulas insonorizadas, acordeones de diferentes tamaños y una amplia biblioteca con partituras y métodos de estudio actualizados para todas las edades.</p>
+            <article class="bloque-historia" style="flex: 1.5;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 15px; border-bottom: 1px solid #dcb143; padding-bottom: 5px; display: inline-block;">Encuéntranos en el mapa</h3>
+                <figure class="mapa-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.323189141571!2d-3.602973024155777!3d37.19638787210032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fcedb83e26eb%3A0x1221d2403cc84345!2sC.%20Valencia%20de%20Don%20Juan%2C%2019%2C%2018014%20Granada!5e0!3m2!1ses!2ses!4v1721648000000!5m2!1ses!2ses" width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </figure>
             </article>
-        </div>
+        </section>
     </section>
 
     <!-- ==================== FOOTER ==================== -->
     <footer>
-        <div class="contenedor-footer">
+        <section class="contenedor-footer">
             <article class="footer-texto">
                 <p>Escuela de Acordeón</p>
                 <p>Mario Torres</p>
@@ -142,7 +255,7 @@
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-whatsapp"></i></a>
             </aside>
-        </div>
+        </section>
     </footer>
 
     <script src="script.js"></script>
